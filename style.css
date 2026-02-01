@@ -49,6 +49,7 @@ button{
     border: solid 1px hsl(0, 0%, 87%);
     border-radius: 8px;
     font-size: 2rem;
+    transition: all 0.1s ease-in;
 }
 .operator{
     background-color: hsl(117, 92%, 67%);
@@ -66,6 +67,7 @@ button{
 }
 button:hover{
     scale: 1.01;
+    opacity: 90%;
 }
 button:active{
     scale: 0.9;
