@@ -55,9 +55,9 @@ button{
     background-color: hsl(117, 92%, 67%);
     border: 1px solid hsl(117, 92%, 30%);
 }
-.equal{
-    background-color: hsl(40, 97%, 57%);
-    border: 1px solid hsl(34, 100%, 45%);
+.backspace{
+    background-color: hsl(12, 64%, 51%);
+    border: 1px solid hsl(12, 90%, 27%);
     color: #fff;
 }
 .clear{

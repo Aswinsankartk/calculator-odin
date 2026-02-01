@@ -5,19 +5,22 @@ buttons.forEach(button => {
     //Clear button
     if(button.innerText==="C"){
         clearDisplay();
-    //Equal button
-    } else if(button.innerText==="=") {
-        try{
-            var answer=calculate();
-            screen.value=answer;
-        } catch {
-            screen.value="Error";
-        }
+    //Backspace button
+    } else if(button.innerText==="backspace") {
+        screen.value=screen.value.slice(0,-1);
     //Adding numbers & operands to screen
     } else {
         screen.value+=button.innerText;
+        if (/\d+[+\-*/]\d+/.test(screen.value)) {
+            screen.value = calculate();
+        }
     }})    
 });
+
+// const operators="+-*/";
+if (/\d+[+\-*/]\d+/.test(screen.value)) {
+    screen.value = calculate();
+}
 
 //Clear Display function
 function clearDisplay(){
@@ -42,7 +45,6 @@ function add(op1,op2){ return op1+op2; };
 function subtract(op1,op2){ return op1-op2; };
 function multiply(op1,op2){ return op1*op2; };
 function divide(op1,op2){ return op1/op2; };
-const operators="+-*/";
 
 //Operate function
 function operate(op1,operator,op2){
